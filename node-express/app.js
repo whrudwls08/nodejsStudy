@@ -12,5 +12,5 @@ app.get('/fastcampus', (req, res) => {
 });
 
 app.listen( port , () => {
-    console.log('express listening on port' , port);
+    console.log('express listening osn port' , port);
 });
