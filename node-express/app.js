@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/fastcampus', (req, res) => {
-    res.send('패캠2222222');
+    res.send('패캠22222 22');
 });
 
 app.listen( port , () => {
