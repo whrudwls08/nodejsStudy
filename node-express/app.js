@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.send('hello express');
 });
 
-app.use( '/admin' , admin );
+app.use( '/admin' , admin ); 
 app.use( '/contacts' , contacts );
 
 
