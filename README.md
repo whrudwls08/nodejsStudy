@@ -23,4 +23,6 @@ view engine
 morgan는 사용자가 어떤 url을 호출 했는지 확인할 수 있는 모듈
 # Chapter1-6
 body-parser를 통하여 데이터를 받아올 수 있다.
+# Chapter1-7
+Global View Variable
 

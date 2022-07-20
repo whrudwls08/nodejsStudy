@@ -21,6 +21,12 @@ app.use( bodyParser.urlencoded({ extended : false }) );
 //     req.body = {}
 // })
 
+app.use( '/uploads', express.static('uploads') );
+
+app.use( (req, res, next) => {
+    app.locals.isLogin = true; //로그인 가능여부
+    next();
+});
 
 app.get('/', (req, res) => {
     res.send('hello express');
