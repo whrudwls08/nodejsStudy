@@ -28,8 +28,9 @@ app.use( (_, __, next) => {
     next();
 });
 
-app.use( (_, __, next) => {
-    app.locals.isLogin = true; //로그인 가능여부
+app.use( (req, __, next) => {
+    app.locals.isLogin = false; //로그인 가능여부
+    app.locals.req_path = req.path
       next();
 });
 
