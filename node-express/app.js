@@ -23,17 +23,26 @@ app.use( bodyParser.urlencoded({ extended : false }) );
 
 app.use( '/uploads', express.static('uploads') );
 
-app.use( (req, res, next) => {
+app.use( (_, __, next) => {
     app.locals.isLogin = true; //로그인 가능여부
     next();
 });
 
-app.get('/', (req, res) => {
+app.use( (_, __, next) => {
+    app.locals.isLogin = true; //로그인 가능여부
+      next();
+});
+
+app.get('/', (_, res) => {
     res.send('hello express');
 });
 
 // Routing
 app.use( '/admin' , admin ); 
+
+app.use( (req, res, _ ) => {
+    res.status(400).render('common/404.html')
+});
 
 function vipMiddleware(req, res, next){
     console.log('최우선 미들웨어');
