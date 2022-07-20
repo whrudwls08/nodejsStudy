@@ -19,4 +19,8 @@ Routing 모든 경로를 js에서 관리하기엔 지저분하기 때문에
 routes 파일안에서 관리한다.
 # Chapter1-4
 view engine
-nunjucks 기초 -1
+# Chapter1-5
+morgan는 사용자가 어떤 url을 호출 했는지 확인할 수 있는 모듈
+# Chapter1-6
+body-parser를 통하여 데이터를 받아올 수 있다.
+

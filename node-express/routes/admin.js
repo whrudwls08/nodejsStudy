@@ -15,11 +15,18 @@ router.get('/', testMiddleware, testMiddleware2, (req, res) => {
 	res.send('admin 이후 url');
 })
 
-router.get('/products', (req, res) => {
-
-	res.render('admin/products.html', {
-		message: `<h1>태그가 출력됩니다.</h1>`,
-		online: 'express'
-	})
+router.get('/products', (_, res) => {
+	res.render('admin/products.html', 
+		{ message : "hello" }
+	);
 });
+
+router.get('/products/write', ( req, res ) => {
+	res.render('admin/write.html');
+})
+
+router.post('/products/write', (req, res) => {
+	res.send(req.body.name)
+})
+
 module.exports = router;
