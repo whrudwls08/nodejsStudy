@@ -26,3 +26,8 @@ body-parser를 통하여 데이터를 받아올 수 있다.
 # Chapter1-7
 Global View Variable
 
+# Chapter2-1
+Sequelize란 ORM(Object-Relational Mapping)
+Nodejs로 mysql 또는 postgresql (db)를 제어할 수 있게 해줌
+# Chapter2-2
+환경변수를 설정할때 dotenv를 설정한다.
